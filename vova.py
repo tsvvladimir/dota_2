@@ -65,7 +65,7 @@ test_target = target[3000:]
 
 text_clf = Pipeline([
         ('vect', CountVectorizer()),
-        ('tfidf',TfidfTransformer()),
+        ('tfidf',TfidfTransformer(use_idf=False)),
         ('clf', LinearSVC())
     ])
 
